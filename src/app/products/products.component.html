@@ -1,0 +1,30 @@
+<div class="container">
+<div class="row">
+    @for (product of products; track product.id) {
+        <div class="col-4">
+<div class="card" style="width: 18rem;">
+    <img [src]="product.photo" [alt]="product.title" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">{{product.price}} L.E/Kg</p>
+      <p>@switch (product.status) {
+        @case ("new"){
+            <b class="text-danger">New Arrival</b>
+        }
+        @case ("special"){
+            <b class="text-danger">Special selection</b>
+        }
+        @default {
+            <b></b>
+        }
+    }</p>
+      <a href="#" class="btn btn-success">Add to cart</a>
+    </div>
+  </div>
+        </div>
+    }
+    @empty {
+        <p class="text-secondary h4 py-5">No products found !</p>
+    }
+  </div>
+</div>
