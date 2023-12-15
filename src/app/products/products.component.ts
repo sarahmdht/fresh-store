@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -46,8 +47,8 @@ products= [
 },
 {
   id: 6,
-  title: "Strawberries",
-  price: 25,
+  title: "Onion",
+  price: 40,
   photo: "../../assets/images/onions-1397037_640.jpg",
   status: ""
 }
